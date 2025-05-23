@@ -1,5 +1,6 @@
 import YouTube from "react-youtube";
 import type { Video } from "../types/Video";
+import { stringToColor } from "../utils/colorHash";
 
 interface VideoCardProps {
   video: Video;
@@ -27,11 +28,23 @@ export const VideoCard = ({ video }: VideoCardProps) => {
     },
   };
 
+  const typeColor = stringToColor(video.type);
+
   return (
     <div className="video-card">
       <div className="video-header">
         <h2>{video.title}</h2>
-        <span className="video-type">
+        <span
+          className="video-type"
+          style={{
+            backgroundColor: typeColor,
+            color: "#000000",
+            padding: "4px 8px",
+            borderRadius: "4px",
+            fontSize: "0.9em",
+            fontWeight: "bold",
+          }}
+        >
           {video.type.charAt(0).toUpperCase() + video.type.slice(1)}
         </span>
       </div>

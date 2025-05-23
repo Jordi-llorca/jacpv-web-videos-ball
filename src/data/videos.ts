@@ -4,7 +4,7 @@ export const VideosJSON = {
       "id": "1",
       "title": "Malagueña de Lecuona",
       "description": "Classical interpretation of Malagueña by Ernesto Lecuona",
-      "youtubeUrl": "https://www.youtube.com/watch?v=J1KUzwQOLd4",
+      "youtubeUrl": "https://youtu.be/hSQ-XOhJplc?list=PL_4CZwWOwrQVN2TBJ1hcCtiTtIkp6arEQ",
       "type": "malagueña"
     },
     {
