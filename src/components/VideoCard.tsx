@@ -21,8 +21,6 @@ export const VideoCard = ({ video }: VideoCardProps) => {
   }
 
   const opts = {
-    height: "390",
-    width: "640",
     playerVars: {
       autoplay: 0,
       origin: window.location.origin,
@@ -31,9 +29,16 @@ export const VideoCard = ({ video }: VideoCardProps) => {
 
   return (
     <div className="video-card">
-      <h2>{video.title}</h2>
+      <div className="video-header">
+        <h2>{video.title}</h2>
+        <span className="video-type">
+          {video.type.charAt(0).toUpperCase() + video.type.slice(1)}
+        </span>
+      </div>
       <p>{video.description}</p>
-      <YouTube videoId={videoId} opts={opts} />
+      <div className="video-wrapper">
+        <YouTube videoId={videoId} opts={opts} className="video-player" />
+      </div>
     </div>
   );
 };

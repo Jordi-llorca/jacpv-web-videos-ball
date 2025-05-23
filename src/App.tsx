@@ -6,7 +6,7 @@ function App() {
   return (
     <ErrorBoundary>
       <div className="app">
-        <h1>Inquietud de Ball JACPV</h1>
+        <h1 className="light-title">Inquietud de Ball JACPV</h1>
         <VideoList />
       </div>
     </ErrorBoundary>
