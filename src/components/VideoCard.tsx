@@ -21,8 +21,8 @@ export const VideoCard = ({ video }: VideoCardProps) => {
   }
 
   const opts = {
-    height: '390',
-    width: '640',
+    height: "390",
+    width: "640",
     playerVars: {
       autoplay: 0,
       origin: window.location.origin,
