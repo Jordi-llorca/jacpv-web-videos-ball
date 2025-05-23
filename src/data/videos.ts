@@ -1,4 +1,4 @@
-{
+export const VideosJSON = {
   "malagueñas": [
     {
       "id": "1",

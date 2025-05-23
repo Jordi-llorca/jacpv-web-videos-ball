@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { VideoCard } from "./VideoCard";
 import type { Video } from "../types/Video";
-import videoData from "../data/videos.json";
+import { VideosJSON } from "../data/videos";
 
 export const VideoList = () => {
   const [videos, setVideos] = useState<Video[]>([]);
@@ -10,7 +10,7 @@ export const VideoList = () => {
 
   useEffect(() => {
     // Combine all videos from different categories
-    const allVideos = Object.values(videoData).flat();
+    const allVideos = Object.values(VideosJSON).flat();
     setVideos(allVideos);
   }, []);
 
