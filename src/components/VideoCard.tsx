@@ -20,14 +20,20 @@ export const VideoCard = ({ video }: VideoCardProps) => {
     return <div>Invalid YouTube URL</div>;
   }
 
+  const opts = {
+    height: '390',
+    width: '640',
+    playerVars: {
+      autoplay: 0,
+      origin: window.location.origin,
+    },
+  };
+
   return (
     <div className="video-card">
       <h2>{video.title}</h2>
-      <span className={`video-type ${video.type}`}>{video.type}</span>
-      <div className="video-container">
-        <YouTube videoId={videoId} className="youtube-player" />
-      </div>
-      <p className="description">{video.description}</p>
+      <p>{video.description}</p>
+      <YouTube videoId={videoId} opts={opts} />
     </div>
   );
 };

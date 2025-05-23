@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { VideoCard } from "./VideoCard";
 import type { Video } from "../types/Video";
-import { VideosJSON } from "../data/videos";
+import { VideosJSON } from "../data/videos.ts";
 
 export const VideoList = () => {
   const [videos, setVideos] = useState<Video[]>([]);
@@ -21,7 +21,6 @@ export const VideoList = () => {
     const searchMatch =
       video.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
       video.description.toLowerCase().includes(searchTerm.toLowerCase());
-
     const typeMatch = selectedType === "all" || video.type === selectedType;
     return searchMatch && typeMatch;
   });
