@@ -21,6 +21,7 @@ export const VideoList = () => {
     const searchMatch =
       video.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
       video.description.toLowerCase().includes(searchTerm.toLowerCase());
+
     const typeMatch = selectedType === "all" || video.type === selectedType;
     return searchMatch && typeMatch;
   });
